@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="col-md-2">
+    <h1>Here are all the experiments, yo.</h1>
+  </div> <!-- sidebar col -->
+  <div class="col-md-5">
+<h1>Experiments</h1>
+<table class=table>
+  <thead>
+    <tr>
+      <th>Language</th>
+      <th>Primary</th>
+      <th>Configuration</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @experiments.each do |experiment| %>
+      <tr>
+        <td><%= experiment.language %></td>
+        <td><%= experiment.primary %></td>
+        <td><%= experiment.configuration %></td>
+        <td><%= link_to 'Show', experiment, {:class => 'btn' } %></td>
+        <td><%= link_to 'Edit', edit_experiment_path(experiment), {:class => 'btn btn-warning'} %></td>
+        <td><%= link_to 'Destroy', experiment,  method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+<div class="col-md-1">
+  <%= link_to 'New Experiment', new_experiment_path, {:class => 'btn btn-success'} %>
+</div>
+</div> <!-- row -->
+<br>

@@ -1,0 +1,34 @@
+<%= form_for(experiment) do |f| %>
+  <% if experiment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(experiment.errors.count, "error") %> prohibited this experiment from being saved:</h2>
+
+      <ul>
+      <% experiment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    Please select which language you are working with
+    <%= f.label :language %>
+    <%= f.text_field :language %>
+  </div>
+
+  <div class="field">
+    Is this experiment starting from a new definition, or are you forking an existing one ?
+    <%= f.label :primary %>
+    <%= f.check_box :primary %>
+  </div>
+
+  <div class="field">
+    <%= f.label :configuration %>
+    <%= f.text_area :configuration %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

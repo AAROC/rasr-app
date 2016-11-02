@@ -1,0 +1,2 @@
+class ExpVar < ApplicationRecord
+end
