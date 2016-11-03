@@ -1,6 +1,7 @@
 [![Sci-GaIA  Champion](http://www.sci-gaia.eu/champions)](https://img.shields.io/badge/scigaia-champion-brightgreen.svg)
 [![Build Status](https://travis-ci.org/AAROC/rasr-app.svg?branch=master)](https://travis-ci.org/AAROC/rasr-app)
 [![Dependency Status](https://www.versioneye.com/user/projects/581b65aeafb6141c557102d5/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/581b65aeafb6141c557102d5)
+[![Dependency Status](https://gemnasium.com/badges/github.com/AAROC/rasr-app.svg)](https://gemnasium.com/github.com/AAROC/rasr-app)
 
 # README
 
