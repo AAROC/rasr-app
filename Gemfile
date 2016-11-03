@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'rspec'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
+gem "omniauth-github", '1.1.1'
 #  Add bootstrap sass
 gem 'bootstrap-sass'
 # Use sqlite3 as the database for Active Record
