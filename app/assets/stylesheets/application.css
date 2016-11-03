@@ -14,7 +14,8 @@
  *= require_self
  */
 
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic");
+ @import url('https://fonts.googleapis.com/css?family=Audiowide|Montserrat');
+
 
 /*!
   * bootswatch v3.3.7
@@ -35,7 +36,7 @@
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 
 html {
-    font-family: sans-serif;
+    font-family: 'Audiowide', cursive;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%
 }
@@ -1060,7 +1061,7 @@ html {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
 }
 body {
-    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     line-height: 1.42857143;
     color: #555555;

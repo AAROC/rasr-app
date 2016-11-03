@@ -13,8 +13,8 @@
   </head>
 
   <body>
-    <header class="navbar navbar-fixed-top navbar-inverse">
-      <div class="container">
+      <nav class="navbar navbar-fixed-top navbar-inverse">
+        <div class="container container-fluid">
         <%= link_to "RASR app.", '#', id: "logo" %>
         <nav>
           <ul class="nav navbar-nav navbar-right">
@@ -24,8 +24,8 @@
           </ul>
         </nav>
       </div>
-    </header>
-    <div class="container-fluid">
+      </nav>
+    <div class="container">
     <%= yield %>
   </div>
   </body>
