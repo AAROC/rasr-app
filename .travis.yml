@@ -9,4 +9,4 @@ before_script:
 script:
   - bundle exec rspec spec
 notifications:
-  -
+  - slack: africa-arabia-roc:qnCRTSXe8ZwiwJfIgaN0xUJN
