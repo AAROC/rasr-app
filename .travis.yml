@@ -1,0 +1,10 @@
+---
+language: ruby
+rvm:
+  - 2.2
+install:
+  - bundle install
+before_script:
+  - "bundle exec rake db:drop db:create db:migrate"
+script:
+  - bundle exec rspec spec
