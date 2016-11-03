@@ -10,4 +10,4 @@ script:
   - bundle exec rspec spec
   - rails test
 notifications:
-  - slack: africa-arabia-roc:qnCRTSXe8ZwiwJfIgaN0xUJN
+  slack: africa-arabia-roc:qnCRTSXe8ZwiwJfIgaN0xUJN
