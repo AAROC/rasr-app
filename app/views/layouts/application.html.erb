@@ -1,15 +1,30 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Rasr</title>
+    <title>RASR - Reproducible Automatic Speech Recognition</title>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!--[if lt IE 9]>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
+      </script>
+    <![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
 
   <body>
-    <div class="container-fluid">
+      <nav class="navbar navbar-fixed-top navbar-inverse">
+        <div class="container container-fluid">
+        <h1> Reproducible Automatic Speech Research</h1>
+        <div nav>
+          <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to "Home", '#', class: "btn" %></li>
+            <li><%= link_to "Help", '#', class: "btn" %></li>
+            <li><%= link_to "Log in", '#', class: "btn" %></li>
+          </ul>
+      </div>
+    </nav>
+    <div class="container"
     <%= yield %>
   </div>
   </body>
