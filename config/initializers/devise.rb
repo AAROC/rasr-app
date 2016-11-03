@@ -271,5 +271,14 @@ Devise.setup do |config|
   # When using OmniAuth, Devise cannot automatically set OmniAuth path,
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = '/my_engine/users/auth'
+
+  # ==> ORCID See https://github.com/datacite/omniauth-orcid
+  # require 'omniauth-orcid'
+  # Rails.application.config.middleware.use OmniAuth::Builder do
+  #   provider :orcid, ENV['APP-GSSR4SXCSKILRVBH'], ENV['4c2074f9-ec7e-4a04-8d8b-90c5911649e5']
+  # end
+  # config.omniauth :orcid, ENV['APP-GSSR4SXCSKILRVBH'], ENV['4c2074f9-ec7e-4a04-8d8b-90c5911649e5'], :scope => 'user:email'
+
   config.omniauth :github, '8de424d6934dbc40d802', '6e4aee301c445d62181d6099168780e7d84d8dd7', :scope => 'user:email'
+
 end
