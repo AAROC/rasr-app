@@ -7,6 +7,7 @@ gem 'therubyracer'
 gem 'devise'
 gem 'omniauth'
 gem "omniauth-github", '1.1.1'
+gem 'omniauth-orcid'
 #  Add bootstrap sass
 gem 'bootstrap-sass'
 # Use sqlite3 as the database for Active Record
