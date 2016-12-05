@@ -1,11 +1,16 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  language: MyString
-  primary: false
+  language: English
+  primary: true
   configuration: MyText
 
 two:
-  language: MyString
+  language: English
   primary: false
+  configuration: MyText
+
+three:
+  language: isiZulu
+  primary: true
   configuration: MyText

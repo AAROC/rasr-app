@@ -1,5 +1,6 @@
 class Person
-
+  attr_reader :age
+  attr_accessor :name
   def initialize (name, age)
     @name = name
     self.age = age
@@ -14,9 +15,9 @@ class Person
   end
 end
 
-person1 = Person.new("Joe")
+person1 = Person.new("Joe",130)
 person1.name= ("Bruce Becker")
 p person1.instance_variables
-puts person1.age
+puts person1.age = 39
 puts person1.get_info
 p person1.instance_variables
