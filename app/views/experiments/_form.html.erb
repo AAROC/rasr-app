@@ -9,26 +9,26 @@
       <% end %>
       </ul>
     </div>
-  <% end %>
-
-  <div class="field">
-    Please select which language you are working with
-    <%= f.label :language %>
-    <%= f.text_field :language %>
+  <% end %> <!--- if errors --->
+<form role="form">
+  <div class="form-group">
+    <label for="language">Please select which language you are working with
+    <input type="text_field" id="language" name="language" class="form-control" placeholder="Ent" /></label>
   </div>
 
-  <div class="field">
-    Is this experiment starting from a new definition, or are you forking an existing one ?
-    <%= f.label :primary %>
-    <%= f.check_box :primary %>
+  <div class="form-group">
+    <label for="primary">Is this experiment starting from a new definition, or are you forking an existing one ?    <input class="checkbox-inline" type="checkbox" id="primary" name="primary" class="form-control" />
+    </label>
   </div>
 
-  <div class="field">
-    <%= f.label :configuration %>
-    <%= f.text_area :configuration %>
+  <div class="form-group">
+    <label for="configuration">Experiment Configuration
+    <input type="textarea" id="configuration" name="configuration" class="form-control"/></label>
   </div>
 
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-actions">
+    <button type="submit" class="btn btn-default">Submit</button>
   </div>
+</form>
+
 <% end %>
