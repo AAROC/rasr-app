@@ -1,5 +1,7 @@
 ---
 language: ruby
+env:
+  - DEVISE_SECRET_KEY_TEST: test
 rvm:
   - 2.2.2
 install:
