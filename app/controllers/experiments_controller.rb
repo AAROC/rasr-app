@@ -6,13 +6,33 @@ class ExperimentsController < ApplicationController
   # GET /experiments.json
 
   def index
-    @experiments = Experiment.all
-    puts  "Getting a glibrary token with brucellino"
-    @token = Glibrary.get_token(ENV["GLIBRARY_USERNAME"],ENV["GLIBRARY_PASSWORD"])
-    puts "token is "
-    p @token
+
+      if $glibrary_response == nil
+        puts "No token for gLibrary. Getting a glibrary token with " + ENV["GLIBRARY_USERNAME"]
+        Glibrary.get_token(ENV["GLIBRARY_USERNAME"],ENV["GLIBRARY_PASSWORD"])
+        # The token is alive for two weeks.
+        created = $glibrary_response['created']
+        puts "token created at " + created.to_s
+        token_created = Time.parse($glibrary_response['created']).to_i
+        time_remaining = $token_expires - (Time.now.to_i)
+      # token_created = DateTime.rfc3339($glibrary_response['created']).to_time.to_i
+    elsif ($token_expires.to_i - Time.now.to_i < 100) || $token_expires == nil
+        puts "the time remaining is less than 10 seconds - refreshing the token"
+        Glibrary.get_token(ENV["GLIBRARY_USERNAME"],ENV["GLIBRARY_PASSWORD"])
+        created = $glibrary_response['created']
+        puts "token created at " + created.to_s + " and expires at " + $token_expires.to_s
+      end
+
+      puts "We have a token and TTL is still ok."
+      p $token_expires.to_i - Time.now.to_i
+
+      @experiments = Experiment.all
+      @collections = Glibrary.collections
   end
 
+  def collections(token)
+    @collections = Glibrary.collections
+  end
   # GET /experiments/1
   # GET /experiments/1.json
   def show
