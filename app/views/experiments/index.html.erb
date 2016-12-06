@@ -1,7 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<% if user_signed_in? %><h2>Here are all the experiments, <%= current_user.inspect %></h2>
+<% if user_signed_in? %><h2>Hello <%= current_user.name %>. Here are all the experiments.</h2>
 <% else %><span class="label label-warning">You need to sign in to do anything</span><% end %>
+<% unless @token %><span class="label-danger">You need a token.</span>
+<% else %>
+<span class="label label-success">glibrary <span class="glyphicon glyphicon-check"></span>
+<% end %>
 
 <div class="row">
   <div class="col-md-9">
