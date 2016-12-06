@@ -1,18 +1,16 @@
 class ExperimentsController < ApplicationController
-  include HTTParty
+  include  HTTParty
   before_action :set_experiment, only: [:show, :edit, :update, :destroy]
 
-
-  def get_token(username, password)
-    @username = username
-    @password = password
-    response = Glibrary.login(username,password)
-    @token = response['id']
-  end
   # GET /experiments
   # GET /experiments.json
+
   def index
     @experiments = Experiment.all
+    puts  "Getting a glibrary token with brucellino"
+    @token = Glibrary.get_token(ENV["GLIBRARY_USERNAME"],ENV["GLIBRARY_PASSWORD"])
+    puts "token is "
+    p @token
   end
 
   # GET /experiments/1
