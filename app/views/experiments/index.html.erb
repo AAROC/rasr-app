@@ -2,9 +2,10 @@
 
 <% if user_signed_in? %><h2>Hello <%= current_user.name %>. Here are all the experiments.</h2>
 <% else %><span class="label label-warning">You need to sign in to do anything</span><% end %>
-<% unless @token %><span class="label-danger">You need a token.</span>
+<% if ($token_expires.to_i - Time.now.to_i < 100) %><span class="label-danger">You need a token.</span>
 <% else %>
-<span class="label label-success">glibrary <span class="glyphicon glyphicon-check"></span></span>
+<span class="label label-success">glibrary: <span class="glyphicon glyphicon-ok-circle"></span> <span class="glyphicon glyphicon-refresh"></span>: <%= Time.at($token_expires).to_datetime
+ %></span>
 <% end %>
 
 <div class="row">
