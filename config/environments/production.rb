@@ -81,6 +81,11 @@ Rails.application.configure do
     config.logger = ActiveSupport::TaggedLogging.new(logger)
   end
 
+  config.glibrary = {
+    user_name: ENV["GLIBRARY_USERNAME_PROD"],
+    password: ENV["GLIBRARY_PASSWORD_PROD"]
+  }
+
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 end

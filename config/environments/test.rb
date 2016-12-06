@@ -39,4 +39,11 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  config.glibrary = {
+    user_name: ENV["GLIBRARY_USERNAME_TEST"],
+    password: ENV["GLIBRARY_PASSWORD_TEST"]
+  }
+
+  
 end

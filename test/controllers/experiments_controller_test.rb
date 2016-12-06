@@ -1,8 +1,15 @@
 require 'test_helper'
 
 class ExperimentsControllerTest < ActionDispatch::IntegrationTest
+
+  def sign_in(user)
+    post user_session_path \
+      "heiko@me.com"    => user.email,
+      "hhdk#s0" => user.encrypted_password
+  end
+
   setup do
-    @experiment = experiments(:one)
+    @experiment = experiments(:english_primary)
   end
 
   test "should get index" do
@@ -11,8 +18,9 @@ class ExperimentsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get new" do
+
     get new_experiment_url
-    assert_response :success
+    assert_response 302
   end
 
   test "should create experiment" do
@@ -34,6 +42,7 @@ class ExperimentsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update experiment" do
+    skip("No updates implemented yet")
     patch experiment_url(@experiment), params: { experiment: { configuration: @experiment.configuration, language: @experiment.language, primary: @experiment.primary } }
     assert_redirected_to experiment_url(@experiment)
   end

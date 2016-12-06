@@ -6,8 +6,8 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = '0ee80cf27338e21839cd8ed69597f3d44bd2e92f69dc5b59c37243f4fea6ee8dfa6c2b975a32dfada3a50c19302d1311beeab32a50ef0ea4898bc38d112e23b3'
-
+  config.secret_key = '0ee80cf27338e21839cd8ed69597f3d44bd2e92f69dc5b59c37243f4fea6ee8dfa6c2b975a32dfada3a50c19302d1311beeab32a50ef0ea4898bc38d112e23b3'
+  config.secret_key = ENV['DEVISE_SECRET_KEY'] if Rails.env.test?
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
@@ -280,5 +280,5 @@ Devise.setup do |config|
   # config.omniauth :orcid, ENV['APP-GSSR4SXCSKILRVBH'], ENV['4c2074f9-ec7e-4a04-8d8b-90c5911649e5'], :scope => 'user:email'
 
   config.omniauth :github, '8de424d6934dbc40d802', '6e4aee301c445d62181d6099168780e7d84d8dd7', :scope => 'user:email'
-
+  config.omniauth :orcid, 'GSSR4SXCSKILRVBH','4c2074f9-ec7e-4a04-8d8b-90c5911649e5', :scope => 'user.uid'
 end
