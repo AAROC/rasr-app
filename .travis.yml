@@ -1,9 +1,9 @@
 ---
 language: ruby
 env:
-  - DEVISE_SECRET_KEY_TEST: test
-  - GLIBRARY_USERNAME: brucellino
-  - GLIBRARY_PASSWORD: EQXIovD0tId4JqV4_CWGNHEzF9HYA4nk
+  DEVISE_SECRET_KEY_TEST: test
+  GLIBRARY_USERNAME: brucellino
+  GLIBRARY_PASSWORD: EQXIovD0tId4JqV4_CWGNHEzF9HYA4nk
 rvm:
   - 2.2.2
 install:
