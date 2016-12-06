@@ -1,6 +1,14 @@
 class ExperimentsController < ApplicationController
+  include HTTParty
   before_action :set_experiment, only: [:show, :edit, :update, :destroy]
 
+
+  def get_token(username, password)
+    @username = username
+    @password = password
+    response = Glibrary.login(username,password)
+    @token = response['id']
+  end
   # GET /experiments
   # GET /experiments.json
   def index

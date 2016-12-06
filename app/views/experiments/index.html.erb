@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
-<h2>Here are all the experiments, yo.</h2>
+
+<% if user_signed_in? %><h2>Here are all the experiments, <%= current_user.inspect %></h2>
+<% else %><span class="label label-warning">You need to sign in to do anything</span><% end %>
 
 <div class="row">
   <div class="col-md-9">
