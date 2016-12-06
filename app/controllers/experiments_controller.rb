@@ -28,6 +28,7 @@ class ExperimentsController < ApplicationController
 
       @experiments = Experiment.all
       @collections = Glibrary.collections
+      
   end
 
   def collections(token)

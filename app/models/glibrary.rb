@@ -35,7 +35,7 @@ class Glibrary < ApplicationRecord
 
   def self.collections
 
-    @collections = self.get( base_uri + "/repos/nwu_hlt",
+    @collections = self.get( base_uri + "/repos/rasr/",
     :headers => {'Authorization' => $glibrary_response['id']} )
     @collections.each do |collection|
       ap collection.to_json
