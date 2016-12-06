@@ -280,5 +280,5 @@ Devise.setup do |config|
   # config.omniauth :orcid, ENV['APP-GSSR4SXCSKILRVBH'], ENV['4c2074f9-ec7e-4a04-8d8b-90c5911649e5'], :scope => 'user:email'
 
   config.omniauth :github, '8de424d6934dbc40d802', '6e4aee301c445d62181d6099168780e7d84d8dd7', :scope => 'user:email'
-
+  config.omniauth :orcid, 'GSSR4SXCSKILRVBH','4c2074f9-ec7e-4a04-8d8b-90c5911649e5', :scope => 'user.uid'
 end
