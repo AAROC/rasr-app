@@ -14,12 +14,14 @@ textarea {
 }
 
 footer {
-  padding-bottom: 60px;
+  position: fixed;
+  height: 200px;
+  width: 80%;
   padding-top: 60px;
+  bottom: 0;
   background-image: url('razor.svg');
   background-position: right bottom;
   background-repeat: no-repeat;
-
 }
 
 .center {
