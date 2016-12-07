@@ -24,6 +24,9 @@
             <li><%= link_to("Help", 'help', class: "btn") %></li>
             <% if user_signed_in? %>
             <li>
+              <%= link_to('Manage Languages', '../languages', class: "btn") %>
+            </li>
+            <li>
             <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
             </li>
             <% else %>
@@ -42,8 +45,10 @@
     <p class="alert alert-danger"><%= alert %></p>
     <% end %>
     <%= yield %>
+
     <%= render 'layouts/footer' %>
 
   </div>
+
   </body>
 </html>
