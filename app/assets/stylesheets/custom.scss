@@ -2,6 +2,7 @@
 @import "bootstrap";
 body {
   padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 section {
@@ -10,6 +11,17 @@ section {
 
 textarea {
   resize: vertical;
+}
+
+footer {
+  position: fixed;
+  height: 200px;
+  width: 80%;
+  padding-top: 60px;
+  bottom: 0;
+  background-image: url('razor.svg');
+  background-position: right bottom;
+  background-repeat: no-repeat;
 }
 
 .center {
