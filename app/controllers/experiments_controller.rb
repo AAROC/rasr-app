@@ -8,7 +8,7 @@ class ExperimentsController < ApplicationController
   def index
 
       if $glibrary_response == nil
-        puts "No token for gLibrary. Getting a glibrary token with " + ENV["GLIBRARY_USERNAME"]
+        puts "No token for gLibrary. Getting a glibrary token with " + ENV["GLIBRARY_USERNAME"].to_s
         Glibrary.get_token(ENV["GLIBRARY_USERNAME"],ENV["GLIBRARY_PASSWORD"])
         # The token is alive for two weeks.
         created = $glibrary_response['created']
@@ -28,7 +28,7 @@ class ExperimentsController < ApplicationController
 
       @experiments = Experiment.all
       @collections = Glibrary.collections
-      
+
   end
 
   def collections(token)
@@ -62,6 +62,12 @@ class ExperimentsController < ApplicationController
         format.json { render json: @experiment.errors, status: :unprocessable_entity }
       end
     end
+    self.SaveToGlibrary
+  end
+
+  def SaveToGlibrary
+    p  $glibrary_response
+    post()
   end
 
   # PATCH/PUT /experiments/1
