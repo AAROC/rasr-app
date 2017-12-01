@@ -3,7 +3,20 @@
 [![Dependency Status](https://www.versioneye.com/user/projects/581b65aeafb6141c557102d5/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/581b65aeafb6141c557102d5)
 [![Dependency Status](https://gemnasium.com/badges/github.com/AAROC/rasr-app.svg)](https://gemnasium.com/github.com/AAROC/rasr-app)
 
-# README
+# RASR
+
+This is the README for the "Reproducible Automatic Speech Recognition" Rails app. This rails app requires components of a science gateway to work : 
+
+  - glibrary
+  - FutureGateway endpoint
+
+This should be deployed with the [Ansible Container]()
+
+## Glibrary
+
+## FutureGateway
+
+# Setup
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
