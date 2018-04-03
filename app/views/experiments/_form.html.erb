@@ -11,19 +11,24 @@
     </div>
   <% end %> <!--- if errors --->
 <form role="form">
-  <div class="form-group">
-    <label for="language">Please select which language you are working with
-    <input type="text_field" id="language" name="language" class="form-control" placeholder="Ent" /></label>
+  <div class="field form-group">
+    <!-- <label for="language">Please select which language you are working with</label>
+    <input type="text_field" id="language" name="language" class="form-control" placeholder="Ent" /> -->
+    <%= f.label :language %>
+    <%= f.text_field :language, class: 'form-control' %>
+  </div>
+
+  <div class="field form-group">
+    <!-- <label for="primary">Is this experiment starting from a new definition, or are you forking an existing one ?</label>
+    <input class="checkbox-inline" type="checkbox" id="primary" name="primary" class="form-control" /> -->
+    <%= f.label :primary %><%= f.check_box :primary, class: 'form-control', type: 'checkbox-inline' %>
   </div>
 
   <div class="form-group">
-    <label for="primary">Is this experiment starting from a new definition, or are you forking an existing one ?    <input class="checkbox-inline" type="checkbox" id="primary" name="primary" class="form-control" />
-    </label>
-  </div>
-
-  <div class="form-group">
-    <label for="configuration">Experiment Configuration
-    <input type="textarea" id="configuration" name="configuration" class="form-control"/></label>
+    <!-- <label for="configuration">Experiment Configuration</label>
+    <input type="textarea" id="configuration" name="configuration" class="form-control"/> -->
+    <%= f.label :configuration %>
+    <%= f.text_area :configuration, class: 'form-control' %>
   </div>
 
   <div class="form-actions">

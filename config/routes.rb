@@ -17,12 +17,13 @@ Rails.application.routes.draw do
   #   get 'link_orcid', :to => 'users/sessions#link_orcid', :as => :link_orcid_session
   # end
 
-  resources :experiments
+  resources :experiments, :languages
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   get "glibrary/index"
   get "experiments/index"
+  # get "/home", :to => redirect('../public/home')
+  get 'public/home'
   root "experiments#index"
-
 
 end
